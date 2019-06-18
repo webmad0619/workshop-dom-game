@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let pos = { x: 0, y: 0 }
+        let spriteDimensions = { w: 100, h: 80 }
+
+        window.onkeydown = function (e) {
+            console.log(e.code)
+            console.log(e.keyCode)
+
+
+            if (e.code === "ArrowRight") {
+                pos.x++
+            }
+
+            if (e.code === "ArrowLeft") {
+                pos.x--
+            }
+
+            if (e.code === "ArrowUp") {
+                pos.y--
+            }
+
+            if (e.code === "ArrowDown") {
+                pos.y++
+            }
+
+            spriteAreaToCopy = {
+                w: pos.x * spriteDimensions.w,
+                h: pos.y * spriteDimensions.h,
+            }
+
+            console.log(spriteAreaToCopy)
+
+        }
+
+    </script>
+</body>
+
+</html>
